@@ -1,0 +1,486 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Contacts from '../components/Contacts.astro'
+
+import { Image } from 'astro:assets'
+import myImage from '../assets/profile-pic.png'
+import vectorChoice from '../assets/vectorChoiceLogo.png'
+import ttecLogo from '../assets/ttecLogo.png'
+import reedelsevierLogo from '../assets/reedelsevierLogo.png'
+import telusLogo from '../assets/telusLogo.png'
+import sitelLogo from '../assets/sitelLogo.png'
+import sykesLogo from '../assets/sykesLogo.png'
+
+import AboutMeItem from '../components/AboutMeItem.astro'
+import SkillItem from '../components/SkillItem.astro'
+---
+
+<Layout title="Jerome Waniwan">
+  <main class="bg-gradient-to-r from-slate-300 to-slate-200">
+    <div class="mx-auto">
+      <div class="flex">
+        <!-- left -->
+        <div class="w-full py-8 px-32 flex flex-col gap-12">
+          <!-- name and image container -->
+          <div
+            class="flex rounded-3xl bg-gradient-to-r from-slate-950 to-slate-800 sticky top-4 opacity-95 shadow">
+            <!-- image -->
+            <div class="w-1/6 p-6 m-auto">
+              <Image
+                src={myImage}
+                alt="A description of my image."
+              />
+            </div>
+
+            <!-- name -->
+            <div class="w-full px-1 py-8 flex flex-col">
+              <div class="my-auto flex flex-col gap-1">
+                <h1 class="text-slate-200 text-4xl font-bold">
+                  Jerome Waniwan
+                </h1>
+
+                <h2 class="text-slate-400 text-lg flex gap-2">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="w-6 h-6">
+                      <path
+                        fill-rule="evenodd"
+                        d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span> Service Desk / IT Desktop Technician</span>
+                </h2>
+
+                <p class="text-slate-500 text-sm italic mt-2">
+                  A well rounded and experienced Tech Support, Service Desk,
+                  Desktop Technician and IT analyst. Worked for different well
+                  known and highly reputed companies internationally in the
+                  field of IT services for 7 years, 9 months and counting.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- about me -->
+          <div
+            class="transition duration-500 hover:bg-slate-300 rounded-lg p-8 flex flex-col gap-2">
+            <h1 class="text-slate-800 text-3xl font-semibold">About</h1>
+
+            <div class="flex gap-3">
+              <div class="flex flex-col gap-4">
+                <AboutMeItem
+                  title="Home Address"
+                  detail="#76 Cherry Blossom St. Brgy. Payatas- A Quezon City"
+                />
+
+                <AboutMeItem
+                  title="Height"
+                  detail="5’6”"
+                />
+
+                <AboutMeItem
+                  title="Weight"
+                  detail="120 lbs."
+                />
+
+                <AboutMeItem
+                  title="Place of Birth"
+                  detail="Quezon City"
+                />
+
+                <AboutMeItem
+                  title="Date of Birth"
+                  detail="February 23, 1984"
+                />
+              </div>
+
+              <div class="mx-auto flex flex-col gap-4">
+                <AboutMeItem
+                  title="Age"
+                  detail="38 yrs old"
+                />
+
+                <AboutMeItem
+                  title="Religion"
+                  detail="Catholic"
+                />
+
+                <AboutMeItem
+                  title="Civil Status"
+                  detail="Married with 3 dependents"
+                />
+
+                <AboutMeItem
+                  title="Name of Spouse"
+                  detail="Melody G. Waniwan"
+                />
+
+                <AboutMeItem
+                  title="Contact Person"
+                  detail="Melody G. Waniwan (Wife) - 09958796638"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- skills -->
+          <div class="px-8 flex flex-col gap-2">
+            <h1 class="text-slate-800 text-3xl font-semibold">Skills</h1>
+            <div class="flex flex-wrap gap-2">
+              <SkillItem name="Windows Local App Troubleshooting" />
+              <SkillItem name="Web Browser Troubleshooting" />
+              <SkillItem name="Internet Troubleshooting" />
+              <SkillItem name="Printer Troubleshooting" />
+              <SkillItem name="Audio and Headset Troubleshooting" />
+              <SkillItem name="C# Programming Windows Forms" />
+              <SkillItem name="Web Developement" />
+            </div>
+          </div>
+
+          <!-- experiences -->
+          <div class="px-8 flex flex-col gap-2">
+            <h1 class="text-slate-800 text-3xl font-semibold">
+              Work Experiences
+            </h1>
+
+            <!-- Vector Choice -->
+            <div
+              class="flex gap-4 px-4 py-6 rounded-lg transition duration-500 hover:bg-slate-300">
+              <!-- image -->
+              <div class="w-40">
+                <a
+                  href="https://vectorchoice.com/"
+                  target="_blank">
+                  <Image
+                    src={vectorChoice}
+                    alt="Logo of Vector Choice"
+                  />
+                </a>
+              </div>
+
+              <!-- info -->
+              <div class="flex flex-col gap-2 w-full">
+                <div>
+                  <h2 class="text-gray-700 text-lg font-semibold">
+                    Vector Choice
+                  </h2>
+                  <h3 class="text-gray-700">
+                    Level 1 Technician | US IT contractor
+                  </h3>
+                  <h4 class="text-gray-700 font-light">
+                    June 12, 2023 to the Present
+                  </h4>
+                </div>
+
+                <div>
+                  <p class="text-gray-800">
+                    Provide Software Technical assistance to Vector Choice
+                    acquired business clients for their Desktop, phone, printers
+                    and tablets. Install required third party applications,
+                    toubleshooting third party applications, troubleshoot
+                    workstation access issues, password resets for Active
+                    Directory profiles, and troubleshoot office app access.
+                    Perform audio troubleshooting with softphones and headsets.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- TTEC -->
+            <div
+              class="flex gap-4 px-4 py-6 rounded-lg transition duration-500 hover:bg-slate-300">
+              <!-- image -->
+              <div class="w-40">
+                <a
+                  href="https://www.ttec.com/"
+                  target="_blank">
+                  <Image
+                    src={ttecLogo}
+                    alt="Logo of TTEC"
+                  />
+                </a>
+              </div>
+
+              <!-- info -->
+              <div class="flex flex-col gap-2 w-full">
+                <div>
+                  <h2 class="text-gray-700 text-lg font-semibold">TTEC</h2>
+                  <h3 class="text-gray-700">Athome Service Desk Analyst</h3>
+                  <h4 class="text-gray-700 font-light">
+                    June 8, 2020 to June 11, 2023
+                  </h4>
+                </div>
+
+                <div>
+                  <p class="text-gray-800">
+                    Part of leadership Support providing software and hardware
+                    technical assistance to Teletech clients for different lines
+                    of businesses which involves troubleshooting Active
+                    Directory credentials, end user software, hardware and
+                    network issues. Perform audio troubleshooting with
+                    softphones and headsets. Communicate escalations via email,
+                    AskNow ticket and via MS Teams. Escalate issues accurately
+                    to the resolving team which is but not limited to Tier 2
+                    escalations, Site IT escalations or other department scoped
+                    in resolving the issue.
+                  </p>
+                </div>
+
+                <div>
+                  <a
+                    href="https://drive.google.com/file/d/1eFn8E_mmb63XKvqDs3ZGjuQJZ7xZyGqT/view?usp=sharing"
+                    class="text-gray-600 underline text-sm"
+                    target="_blank">
+                    View Employment Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reed Elsevier Philippines -->
+            <div
+              class="flex gap-4 px-4 py-6 rounded-lg transition duration-500 hover:bg-slate-300">
+              <!-- image -->
+              <div class="w-40">
+                <a
+                  href="https://www.reedelsevier.com.ph"
+                  target="_blank">
+                  <Image
+                    src={reedelsevierLogo}
+                    alt="Logo of Reed Elsevier Philippines"
+                  />
+                </a>
+              </div>
+
+              <!-- info -->
+              <div class="flex flex-col gap-2 w-full">
+                <div>
+                  <h2 class="text-gray-700 text-lg font-semibold">
+                    Reed Elsevier Philippines
+                  </h2>
+                  <h3 class="text-gray-700">
+                    Technical Support Representative
+                  </h3>
+                  <h4 class="text-gray-700 font-light">
+                    October 15, 2018 to September 17, 2019
+                  </h4>
+                </div>
+
+                <div>
+                  <p class="text-gray-800">
+                    Provide over the phone assistance in troubleshooting
+                    software errors, incorrect entries and how to’s for the
+                    PCLaw accounting software as well as browser troubleshooting
+                    for LexisNexis products. Analyze and assess cases and
+                    escalate to proper channel as needed. Provide tech
+                    assistance through the chat channel.
+                  </p>
+                </div>
+
+                <div>
+                  <a
+                    href="https://drive.google.com/file/d/1mGw4ajG_gmcCdhk-d7sxwe0gjFe9Sn1S/view?usp=sharing"
+                    class="text-gray-600 underline text-sm"
+                    target="_blank">
+                    View Employment Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Telus International Digital Solutions -->
+            <div
+              class="flex gap-4 px-4 py-6 rounded-lg transition duration-500 hover:bg-slate-300">
+              <!-- image -->
+              <div class="w-40">
+                <a
+                  href="https://www.telusinternational.com/"
+                  target="_blank">
+                  <Image
+                    src={telusLogo}
+                    alt="Logo of Telus International Digital Solutions"
+                  />
+                </a>
+              </div>
+
+              <!-- info -->
+              <div class="flex flex-col gap-2 w-full">
+                <div>
+                  <h2 class="text-gray-700 text-lg font-semibold">
+                    Telus International Digital Solutions
+                  </h2>
+                  <h3 class="text-gray-700">Field Support Analyst</h3>
+                  <h4 class="text-gray-700 font-light">
+                    October 10, 2016 to October 12, 2018
+                  </h4>
+                </div>
+
+                <div>
+                  <p class="text-gray-800">
+                    Provide core technical back-end assistance to Telus service
+                    field technicians for Residential and Business copper
+                    internet services. Scope of work includes providing
+                    significant analysis on copper path health or provisioning
+                    in order to have an idea where the fault is at whether
+                    physical or backend. Work involves troubleshooting of
+                    provisioning issues such as no sync, IP/ data issue, slow
+                    internet, Set-top boxes and TV issues. Scope of work as well
+                    involves provisioning internet and TV, assigning ADSL or
+                    VDSL port for new customers.
+                  </p>
+                </div>
+
+                <div>
+                  <a
+                    href="https://drive.google.com/file/d/1cj39I83rNfbZkMCDGl3oOTqvc7b6vC6u/view?usp=sharing"
+                    class="text-gray-600 underline text-sm"
+                    target="_blank">
+                    View Employment Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sitel Philippines -->
+            <div
+              class="flex gap-4 px-4 py-6 rounded-lg transition duration-500 hover:bg-slate-300">
+              <!-- image -->
+              <div class="w-40">
+                <a
+                  href="https://foundever.com/"
+                  target="_blank">
+                  <Image
+                    src={sitelLogo}
+                    alt="Logo of Sitel Philippines"
+                  />
+                </a>
+              </div>
+
+              <!-- info -->
+              <div class="flex flex-col gap-2 w-full">
+                <div>
+                  <h2 class="text-gray-700 text-lg font-semibold">
+                    Sitel Philippines
+                  </h2>
+                  <h3 class="text-gray-700">
+                    Technical Support Representative / SME
+                  </h3>
+                  <h4 class="text-gray-700 font-light">
+                    March 20, 2015 to September 30, 2016
+                  </h4>
+                </div>
+
+                <div>
+                  <p class="text-gray-800">
+                    Front end support providing over the phone diagnosis of the
+                    issue and assessing if the issue is hardware or software.
+                    Scope involves and is only limited to software issues on
+                    Toshiba laptops. Access and remotely control customer’s
+                    laptop to troubleshoot issues such as windows OS, drivers,
+                    virus removal, windows lockout, OS installation or
+                    troubleshoot any 3rd party applications having errors or
+                    issues. Job also involves hard selling for customers that
+                    are already out of software warranty or if the issue is 3rd
+                    party software. SME tasks involve taking over escalations,
+                    taking over screen sharing sessions of team members to
+                    provide advance troubleshooting and provide accurate
+                    resolution. In charge of giving daily reports as to the
+                    resolution rate of the team and providing feedback and
+                    coaching to team members regarding proper isolation and
+                    troubleshooting bound by our support.
+                  </p>
+                </div>
+
+                <div>
+                  <a
+                    href="https://drive.google.com/file/d/1TgZnkisXIAT3rCAFRcKQY0I9Ji5SQ6zn/view?usp=sharing"
+                    class="text-gray-600 underline text-sm"
+                    target="_blank">
+                    View Employment Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sykes Asia -->
+            <div
+              class="flex gap-4 px-4 py-6 rounded-lg transition duration-500 hover:bg-slate-300">
+              <!-- image -->
+              <div class="w-40">
+                <a
+                  href="https://foundever.com/"
+                  target="_blank">
+                  <Image
+                    src={sykesLogo}
+                    alt="Logo of Sykes Asia"
+                  />
+                </a>
+              </div>
+
+              <!-- info -->
+              <div class="flex flex-col gap-2 w-full">
+                <div>
+                  <h2 class="text-gray-700 text-lg font-semibold">
+                    Sykes Asia
+                  </h2>
+                  <h3 class="text-gray-700">
+                    Technical Support Representative
+                  </h3>
+                  <h4 class="text-gray-700 font-light">
+                    August 11, 2014 to January 29, 2015
+                  </h4>
+                </div>
+
+                <div>
+                  <p class="text-gray-800">
+                    Front end support providing over the phone software
+                    technical assistance for DragonNaturally Speaking software
+                    which is a type of advanced speech recognition software. Job
+                    involves advanced troubleshooting installation issues,
+                    feature issues, error messages and guiding customers
+                    regarding proper setting up and use of the program on a
+                    windows platform.
+                  </p>
+                </div>
+
+                <div>
+                  <a
+                    href="https://drive.google.com/file/d/1uwFyk0dYMFpEQVmb3h9WkEdPv4eAHVP4/view?usp=sharing"
+                    class="text-gray-600 underline text-sm"
+                    target="_blank">
+                    View Employment Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- hobbies -->
+          <div class="px-8 flex flex-col gap-2">
+            <h1 class="text-slate-800 text-3xl font-semibold">Hobbies</h1>
+            <div class="flex flex-wrap gap-2">
+              <SkillItem name="Programming" />
+              <SkillItem name="C# Fundamentals" />
+              <SkillItem name="Web Developement" />
+              <SkillItem name="PC and Mobile Games" />
+              <SkillItem name="Tochlight I and II - PC Game" />
+              <SkillItem name="Mobile Legends - Mobile Game" />
+              <SkillItem name="Playing Guitar" />
+              <SkillItem name="Music" />
+              <SkillItem name="Singing via WeSing App" />
+              <SkillItem name="Listening to Spotify" />
+            </div>
+          </div>
+        </div>
+
+        <!-- right -->
+        <Contacts />
+      </div>
+    </div>
+  </main>
+</Layout>
