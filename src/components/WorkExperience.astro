@@ -1,0 +1,68 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+  imageHref: string
+  companyLogo: ImageMetadata
+  imageAlt: string
+  companyName: string
+  position: string
+  timeline: string
+  certificateURL: string
+}
+
+const {
+  imageHref,
+  companyLogo,
+  imageAlt,
+  companyName,
+  position,
+  timeline,
+  certificateURL,
+} = Astro.props
+---
+
+<div
+  class="flex gap-4 px-4 py-6 rounded-lg transition duration-500 hover:bg-slate-300">
+  <!-- image -->
+  <div class="w-40">
+    <a
+      href={imageHref}
+      target="_blank">
+      <Image
+        src={companyLogo}
+        alt={imageAlt}
+      />
+    </a>
+  </div>
+
+  <!-- info -->
+  <div class="flex flex-col gap-2 w-full">
+    <div>
+      <h2 class="text-gray-700 text-lg font-semibold">{companyName}</h2>
+      <h3 class="text-gray-700">{position}</h3>
+      <h4 class="text-gray-700 font-light">
+        {timeline}
+      </h4>
+    </div>
+
+    <div>
+      <p class="text-gray-600">
+        <slot />
+      </p>
+    </div>
+
+    <div>
+      {
+        certificateURL && (
+          <a
+            href={certificateURL}
+            class="text-gray-600 underline text-sm"
+            target="_blank">
+            View Employment Certificate
+          </a>
+        )
+      }
+    </div>
+  </div>
+</div>
